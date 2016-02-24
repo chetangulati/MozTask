@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mozilla Chandigarh</title>
+	<meta name="viewport" content="width=device-width, intial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<header id="headWrapper">
+	<nav>
+		<img src="images/header.jpg" class="shdw-6 logo">
+		<ul class="shdw-6" class="topNav">
+			<li><a href="#Home">Home</a></li>
+			<li><a href="#Leaders">Leaders</a></li>
+			<li class="dropdown">
+			<a href="#Events" class="dropbtn">Events</a>
+			<!--  <div class="dropdown-content">
+			  	<a href="#">Event 1</a>
+			  	<a href="#">Event 2</a>
+			  	<a href="#">Event 3</a>
+			  </div>-->
+			</li>
+			<li><a href="#Members">Members</a></li>
+			<li><a href="#Gallery">Gallery</a></li>
+<div class="clear"></div>
+		</ul>
+
+	</nav>
+	
+</header>
+
+<section id="Home" id="#Home">
+	<div class="container clear" >
+	<h1>Welcome</h1>
+	<p>
+Ready to dive into the world of Open web, where you are free and independent of your surf ! CU Firefox Club is where everyone is like you ! Crazy about surfing the Open Web !</p>
+	</div>
+</section>
+<section id="Leaders" id="#Leaders">
+	
+</section>
+<section id="Events" id="#Events">
+	
+</section>
+<section id="Members" id="#Members">
+	
+</section>
+<section id="Gallery" id="#Gallery">
+	
+</section>
+
+<!-- Back to Top -->
+
+<script type="text/javascript">
+// create the back to top button
+$('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
+
+var amountScrolled = 300;
+
+$(window).scroll(function() {
+	if ( $(window).scrollTop() > amountScrolled ) {
+		$('a.back-to-top').fadeIn('slow');
+	} else {
+		$('a.back-to-top').fadeOut('slow');
+	}
+});
+
+$('a.back-to-top, a.simple-back-to-top').click(function() {
+	$('html, body').animate({
+		scrollTop: 0
+	}, 1000);
+	return false;
+});
+</script>
+
+
+<!-- Smooth Scroll -->
+
+	<script>
+  $(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
+	</script>
+
+
+</body>
+</html>
